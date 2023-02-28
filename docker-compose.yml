@@ -1,0 +1,9 @@
+services:
+  first:
+    image: node
+    command: node -e 'console.log("env", process.env.NODE_ENV)'
+  second:
+    image: node
+    environment:
+      NODE_ENV: production
+    command: node -e 'console.log("env", process.env.NODE_ENV)'
